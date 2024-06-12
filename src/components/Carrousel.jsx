@@ -39,26 +39,6 @@ const CarouselComponent = () => {
             </div>
             <div>
                 <img src="" alt=""/>
-                <p>Páginas webs</p>
-            </div>
-            <div>
-                <img src="" alt=""/>
-                <p>Aplicaciones web</p>
-            </div>
-            <div>
-                <img src="" alt=""/>
-                <p>Aplicación web para control de procesos de tu negoció</p>
-            </div>
-            <div>
-                <img src="" alt=""/>
-                <p>Actualización de tu página o aplicación</p>
-            </div>
-            <div>
-                <img src="" alt=""/>
-                <p>Asesoría</p>
-            </div>
-            <div>
-                <img src="" alt=""/>
                 <p>Diseño</p>
             </div>
         </Carousel>
