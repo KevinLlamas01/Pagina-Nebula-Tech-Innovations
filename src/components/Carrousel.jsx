@@ -2,6 +2,8 @@ import React from 'react';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 
+import { Card } from './Card';
+
 const responsive = {
     superLargeDesktop: {
         breakpoint: { max: 4000, min: 3000 },
@@ -21,46 +23,60 @@ const responsive = {
     }
 };
 
+import imagen from '.././assets/Aplicacion.png';
+
 const CarouselComponent = () => {
     return (
-        <Carousel 
-        responsive={responsive} 
-        autoPlay={true} 
-        autoPlaySpeed={4000} 
-        infinite={true} 
-        arrows={true} 
-        showDots={false} 
-        swipeable={true} 
-        draggable={true}
+        <Carousel
+            responsive={responsive}
+            autoPlay={true}
+            autoPlaySpeed={3000}
+            infinite={true}
+            arrows={true}
+            showDots={true}
+            swipeable={true}
+            draggable={true}
         >
-            <div>
-                <img src="" alt=""/>
-                <p>Ecommerce</p>
-            </div>
-            <div>
-                <img src="" alt=""/>
-                <p>Páginas webs</p>
-            </div>
-            <div>
-                <img src="" alt=""/>
-                <p>Aplicaciones web</p>
-            </div>
-            <div>
-                <img src="" alt=""/>
-                <p>Aplicación web para control de procesos de tu negoció</p>
-            </div>
-            <div>
-                <img src="" alt=""/>
-                <p>Actualización de tu página o aplicación</p>
-            </div>
-            <div>
-                <img src="" alt=""/>
-                <p>Asesoría</p>
-            </div>
-            <div>
-                <img src="" alt=""/>
-                <p>Diseño</p>
-            </div>
+            <Card
+                Nombre={'Aplicaciones web'}
+                Detalle={'Desarrollo de aplicaciones web interactivas y funcionales.'}
+                Url={imagen}
+            />
+            <Card
+                Nombre={'Páginas webs'}
+                Detalle={'Creación de sitios web personalizados para tu negocio.'}
+                Url={imagen}
+            />
+            <Card
+                Nombre={'Ecommerce'}
+                Detalle={'Desarrollo de tiendas en línea para vender productos o servicios'}
+                Url={imagen}
+            />
+            <Card
+                Nombre={'Aplicación web para control de procesos de tu negoció'}
+                Detalle={'Herramientas web para gestionar y optimizar procesos de tu negoció.'}
+                Url={imagen}
+            />
+            <Card
+                Nombre={'Aplicación web para control de procesos de tu negoció'}
+                Detalle={'Herramientas web para gestionar y optimizar procesos de tu negoció.'}
+                Url={imagen}
+            />
+            <Card
+                Nombre={'Actualización de tu página o aplicación'}
+                Detalle={'Mejoras y mantenimiento de sitios web y aplicaciones existentes.'}
+                Url={imagen}
+            />
+            <Card
+                Nombre={'Asesoría'}
+                Detalle={' Consultoría en tecnología y desarrollo web.'}
+                Url={imagen}
+            />
+            <Card
+                Nombre={'Diseño'}
+                Detalle={'Diseño gráfico y UX/UI para tus proyectos digitales.'}
+                Url={imagen}
+            />
         </Carousel>
     );
 }
