@@ -37,6 +37,18 @@ const CarouselComponent = () => {
                 <img src="" alt=""/>
                 <p>Ecommerce</p>
             </div>
+            <div>
+                <img src="" alt=""/>
+                <p>Ecommerce</p>
+            </div>
+            <div>
+                <img src="" alt=""/>
+                <p>Ecommerce</p>
+            </div>
+            <div>
+                <img src="" alt=""/>
+                <p>Ecommerce</p>
+            </div>
         </Carousel>
     );
 }
