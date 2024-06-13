@@ -29,17 +29,17 @@ const App = () => {
 
   return (
     <>
-      {showHeader && <Header />}
+      {showHeader && <Header/>}
       <main className="bg-gray-50">
-        <Sec1_Inicio />
-        <Sec2_Nosotros />
-        <Sec3_Servicios />
-        <Sec4_Diseño />
-        <Sec5_Clientes />
-        <Sec6_Reportes />
-        <Sec7_Sistemas />
+        <Sec1_Inicio/>
+        <Sec2_Nosotros/>
+        <Sec3_Servicios/>
+        <Sec4_Diseño/>
+        <Sec5_Clientes/>
+        <Sec6_Reportes/>
+        <Sec7_Sistemas/>
       </main>
-      <Footer />
+      <Footer/>
     </>
   );
 };
