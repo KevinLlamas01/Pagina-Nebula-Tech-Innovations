@@ -2,7 +2,7 @@ import logo from ".././assets/LogoNebula.webp";
 
 export function Sec2_Nosotros() {
   return (
-    <section className="flex justify-between">
+    <section id="nosotros" className="flex justify-between">
       <div className="flex justify-center items-center w-[50%]">
         <img className="w-[40%]" src={logo} alt="Logo de Nebula Tech Innovations" />
       </div>
