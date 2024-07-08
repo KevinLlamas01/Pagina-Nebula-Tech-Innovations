@@ -38,19 +38,12 @@ const Carousel2 = () => {
             showDots={false}
             swipeable={true}
             draggable={true}
+            itemClass="carousel-item2"
         >
-            <div>
-                <img src={empresa1} alt="Logotipo empresa 1" />
-            </div>
-            <div>
-                <img src={empresa2} alt="Logotipo empresa 2" />
-            </div>
-            <div>
-                <img src={empresa3} alt="Logotipo empresa 3" />
-            </div>
-            <div>
-                <img src={empresa4} alt="Logotipo empresa 4" />
-            </div>
+            <img className='w-auto h-[85px]' src={empresa1} alt="Logotipo empresa 1" />
+            <img className='w-auto h-[85px]' src={empresa2} alt="Logotipo empresa 2" />
+            <img className='w-auto h-[85px]' src={empresa3} alt="Logotipo empresa 3" />
+            <img className='w-auto h-[85px]' src={empresa4} alt="Logotipo empresa 4" />
         </Carousel>
     );
 }

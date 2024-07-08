@@ -5,3 +5,68 @@
 *{
     font-family: "Poppins", sans-serif;
 }
+
+.carousel-item {
+    padding:0px 70px;
+  }
+.carousel-item2 {
+    padding:0px 100px; 
+  }
+
+  .react-multiple-carousel__arrow {
+    z-index: 10;
+  }
+
+  /* -------ANIMACION DE LAS SECCIONES -------- */
+  @keyframes sections {
+    from {
+      opacity: 0;
+      scale: 25%;
+    }
+    to {
+      opacity: 100%;
+    }
+  }
+  #diseño, #reportes { 
+    view-timeline-name: --section;
+    view-timeline-axis: block;
+    animation-timeline: --section;
+    animation-name: sections;
+    animation-range: entry 25% cover 50%;
+    animation-fill-mode: both;
+  }  
+
+  /* -------ANIMACION DEL LOGO --------
+  @keyframes img {
+  0% {
+    transform: translateX(-100%); 
+    opacity: 0; 
+  }
+  25% {
+    transform: translateX(-75%); 
+    opacity: 0.25;
+  }
+  50% {
+    transform: translateX(-50%); 
+    opacity: 0.5;
+  }
+  75% {
+    transform: translateX(-25%); 
+    opacity: 0.75;
+  }
+  100% {
+    transform: translateX(0); 
+    opacity: 1;
+  }
+}
+#img_nebula { 
+  view-timeline-name: --section;
+  view-timeline-axis: block;
+  animation-timeline: --section;
+  animation-name: img;
+
+  animation-range: entry 25% cover 50%;
+  animation-fill-mode: both;
+}
+
+ */

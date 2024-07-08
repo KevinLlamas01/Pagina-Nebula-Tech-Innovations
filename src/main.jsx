@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import ReactDOM from "react-dom/client";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 // COMPONENTES
 import { Header } from "./components/Header.jsx";
@@ -20,16 +22,17 @@ const App = () => {
   const [showHeader, setShowHeader] = useState(false);
 
   useEffect(() => {
+    AOS.init();
     const timer = setTimeout(() => {
       setShowHeader(true);
-    }, 5000); // 5000 ms = 5 segundos
+    }, 3500);
 
     return () => clearTimeout(timer);
   }, []);
 
   return (
     <>
-      {showHeader && <Header/>}
+      {showHeader && <Header className="fade-in" />}
       <main className="bg-gray-50">
         <Sec1_Inicio/>
         <Sec2_Nosotros/>
