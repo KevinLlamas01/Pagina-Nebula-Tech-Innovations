@@ -17,6 +17,7 @@ export function Header() {
               <Link to="servicios" smooth={true} duration={500} offset={-150}  className=' hover:text-white md:hover:text-blue-800 px-2 rounded-lg border-opacity-0 cursor-pointer'>Servicios</Link>
               <Link to="clientes" smooth={true} duration={500} offset={-150}  className=' hover:text-white md:hover:text-blue-800 px-2 rounded-lg border-opacity-0 cursor-pointer'>Clientes</Link>
               <Link to="sistemas" smooth={true} duration={500} offset={-150}  className=' hover:text-white md:hover:text-blue-800 px-2 rounded-lg border-opacity-0 cursor-pointer'>Nuestros sistemas</Link>
+              <Link to="calculadora" smooth={true} duration={500} offset={-150}  className=' hover:text-white md:hover:text-blue-800 px-2 rounded-lg border-opacity-0 cursor-pointer'>Cotización</Link>
               <Link to="contactanos" smooth={true} duration={500} offset={-150}  className=' hover:text-white md:hover:text-blue-800 px-2 rounded-lg border-opacity-0 cursor-pointer'>Contáctanos</Link>
           </Navbar.Collapse>
       </Navbar>

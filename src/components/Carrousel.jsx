@@ -1,8 +1,13 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
-
 import { Card } from './Card';
+// CONFIGURACIÓN DE SUPABASE
+import { createClient } from "@supabase/supabase-js";
+
+const SUPABASE_URL = "https://mcngkxxvfznvlhceckpz.supabase.co";
+const SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im1jbmdreHh2ZnpudmxoY2Vja3B6Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3MjY1ODYwNTgsImV4cCI6MjA0MjE2MjA1OH0.T6r0_SHNcDvy9GJND8hykmJLSFBm_rCwzzyfLOqDi7E";
+const supabase = createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 
 const responsive = {
   superLargeDesktop: {
@@ -23,57 +28,42 @@ const responsive = {
   },
 };
 
-import imagen from '.././assets/Aplicacion.png';
-
 const CarouselComponent = () => {
+  const [servicios, setServicios] = useState([]);
+
+  useEffect(() => {
+    const getServicios = async () => {
+      const { data } = await supabase
+        .from("Servicio")
+        .select()
+        .eq('estatusServicio', 1);
+      setServicios(data);
+    };
+
+    getServicios();
+  }, []);
+
   return (
-      <Carousel
-        responsive={responsive}
-        autoPlay={true}
-        autoPlaySpeed={2000}
-        infinite={true}
-        arrows={true}
-        showDots={false}
-        swipeable={true}
-        draggable={true}
-        itemClass="carousel-item" 
-      >
+    <Carousel
+      responsive={responsive}
+      autoPlay={true}
+      autoPlaySpeed={2000}
+      infinite={true}
+      arrows={true}
+      showDots={false}
+      swipeable={true}
+      draggable={true}
+      itemClass="carousel-item"
+    >
+      {servicios.map((servicio) => (
         <Card
-          Nombre={'Aplicaciones web'}
-          Detalle={'Desarrollo de aplicaciones web interactivas y funcionales.'}
-          Url={imagen}
+          key={servicio.id} // Añade una clave única para cada item del carousel
+          Nombre={servicio.tituloServicio}
+          Detalle={servicio.descripcionServicio}
+          Url={servicio.imagenServicio}
         />
-        <Card
-          Nombre={'Páginas webs'}
-          Detalle={'Creación de sitios web personalizados para tu negocio.'}
-          Url={imagen}
-        />
-        <Card
-          Nombre={'Ecommerce'}
-          Detalle={'Desarrollo de tiendas en línea para vender productos o servicios'}
-          Url={imagen}
-        />
-        <Card
-          Nombre={'Aplicación web para control de procesos de tu negoció'}
-          Detalle={'Herramientas web para gestionar y optimizar procesos de tu negoció.'}
-          Url={imagen}
-        />
-        <Card
-          Nombre={'Actualización de tu página o aplicación'}
-          Detalle={'Mejoras y mantenimiento de sitios web y aplicaciones existentes.'}
-          Url={imagen}
-        />
-        <Card
-          Nombre={'Asesoría'}
-          Detalle={'Consultoría en tecnología y desarrollo web.'}
-          Url={imagen}
-        />
-        <Card
-          Nombre={'Diseño'}
-          Detalle={'Diseño gráfico y UX/UI para tus proyectos digitales.'}
-          Url={imagen}
-        />
-      </Carousel>
+      ))}
+    </Carousel>
   );
 };
 

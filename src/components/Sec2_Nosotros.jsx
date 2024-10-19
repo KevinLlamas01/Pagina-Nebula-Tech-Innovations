@@ -4,7 +4,7 @@ export function Sec2_Nosotros() {
   return (
     <section id="nosotros" className="flex justify-between">
       <div className="flex justify-center items-center w-[50%]">
-        <img data-aos="fade-down-right" id="img_nebula" className="w-[40%]" src={logo} alt="Logo de Nebula Tech Innovations" />
+        <img data-aos="fade-down-right" id="img_nebula" className="w-60" src={logo} alt="Logo de Nebula Tech Innovations" />
       </div>
       <div className="bg-[#183366] flex justify-center items-center w-[50%] h-[400px]">
         <p className="text-white text-center p-5">
